@@ -1,16 +1,85 @@
-# Agent Zero Otonom Ajan
+# Agent Zero Autonomous Agent / Agent Zero Otonom Ajan
 
+**A fully local, self-improving autonomous agent system.**  
 **Tamamen yerel çalışan, kendini geliştiren otonom ajan sistemi.**
 
-Agent Zero üzerine kurulu, 16 GB VRAM hedefiyle tasarlanmış, faz faz kurulabilen güvenli otonom ajan çatısı.
+Built on Agent Zero. Designed for 16 GB VRAM. Installed in phases. Safe and modular.  
+Agent Zero üzerine kurulu. 16 GB VRAM hedefiyle tasarlanmış. Faz faz kurulabilen güvenli otonom ajan çatısı.
 
-> **Tasarım ve geliştirme:** Serdar Kaptan  
+> **Design & Development / Tasarım ve Geliştirme:** Serdar Kaptan  
 > GitHub: [@serdarsolak07-cell](https://github.com/serdarsolak07-cell)
 
 ---
 
-## Özellikler
+## English
 
+### Features
+- **Brain + Cerebellum**: Agent Zero + Letta long-term memory
+- **Critic & Student**: Learning loop after every task
+- **Approval Layer**: Silent or Active mode
+- **Emergency Stop**: Watchdog process outside the model (`DUR` / `STOP`)
+- **Source Check**: Verification of factual claims
+- **Security boundaries**, versioning, health checks
+- **8-phase** incremental setup
+- Fully local (Ollama / LM Studio), no cloud required
+
+### Quick Start
+
+**Requirements**
+- Docker
+- Optional: Ollama (for local models)
+
+**Linux / macOS**
+```bash
+git clone https://github.com/serdarsolak07-cell/agent-zero-otonom-ajan.git
+cd agent-zero-otonom-ajan
+chmod +x scripts/install.sh
+./scripts/install.sh
+```
+
+**Windows (PowerShell)**
+```powershell
+git clone https://github.com/serdarsolak07-cell/agent-zero-otonom-ajan.git
+cd agent-zero-otonom-ajan
+.\scripts\install.ps1
+```
+
+After installation open:
+
+**http://localhost:5080**
+
+Go to Settings → Agent Profile → select **otonom**.
+
+**Local Model**  
+After installing Ollama, set in Agent Zero:
+- Provider: Ollama
+- Base URL: `http://host.docker.internal:11434`
+
+### Phases
+The system is installed in 8 phases. See the `phases/` folder.
+
+| Phase | Content |
+|-------|---------|
+| 1 | Brain and Cerebellum |
+| 2 | Critic, Student, Approval Layer |
+| 3 | Sleep node |
+| 4 | Security, health, versioning |
+| 5 | Source Check and context reset |
+| 6 | Emergency Stop (watchdog) |
+| 7 | Web UI and Settings |
+| 8 | Voice layer |
+
+### Emergency Stop
+```bash
+python3 phases/06-acil-durdurma/watchdog.py
+```
+From another terminal type `DUR` or `STOP` → the system pauses immediately. Type `DEVAM` to resume.
+
+---
+
+## Türkçe
+
+### Özellikler
 - **Beyin + Beyincik**: Agent Zero + Letta uzun süreli hafıza
 - **Eleştirmen & Öğrenci**: Her görevden öğrenme döngüsü
 - **Onay Katmanı**: Sessiz veya Aktif mod
@@ -20,13 +89,13 @@ Agent Zero üzerine kurulu, 16 GB VRAM hedefiyle tasarlanmış, faz faz kurulabi
 - **8 fazlı** parça parça kurulum
 - Tamamen yerel (Ollama / LM Studio), bulut gerektirmez
 
-## Hızlı Kurulum
+### Hızlı Kurulum
 
-### Gereksinimler
+**Gereksinimler**
 - Docker
 - İsteğe bağlı: Ollama (yerel model için)
 
-### Linux / macOS
+**Linux / macOS**
 ```bash
 git clone https://github.com/serdarsolak07-cell/agent-zero-otonom-ajan.git
 cd agent-zero-otonom-ajan
@@ -34,7 +103,7 @@ chmod +x scripts/install.sh
 ./scripts/install.sh
 ```
 
-### Windows (PowerShell)
+**Windows (PowerShell)**
 ```powershell
 git clone https://github.com/serdarsolak07-cell/agent-zero-otonom-ajan.git
 cd agent-zero-otonom-ajan
@@ -47,13 +116,12 @@ Kurulum bitince tarayıcıda aç:
 
 Ayarlar → Agent Profile → **otonom** seç.
 
-### Yerel Model
+**Yerel Model**  
 Ollama kurduktan sonra Agent Zero ayarlarında:
 - Provider: Ollama
 - Base URL: `http://host.docker.internal:11434`
 
-## Fazlar
-
+### Fazlar
 Sistem 8 fazda kurulur. Detaylar `phases/` klasöründe.
 
 | Faz | İçerik |
@@ -67,20 +135,23 @@ Sistem 8 fazda kurulur. Detaylar `phases/` klasöründe.
 | 7 | Web arayüzü ve Ayarlar |
 | 8 | Sesli katman |
 
-## Acil Durdurma
-
+### Acil Durdurma
 ```bash
 python3 phases/06-acil-durdurma/watchdog.py
 ```
-
 Başka bir terminalden `DUR` veya `STOP` yaz → sistem anında durur. `DEVAM` ile devam eder.
 
-## Lisans ve Katkı
+---
 
+## License / Lisans
+
+Personal use and learning.  
 Kişisel kullanım ve öğrenme amaçlıdır.
 
+**Designed and shared by Serdar Kaptan.**  
 **Serdar Kaptan** tarafından tasarlanmış ve paylaşılmıştır.
 
 ---
 
+*Built on the open-source Agent Zero framework.*  
 *Bu proje Agent Zero açık kaynak çatısı üzerine inşa edilmiştir.*
