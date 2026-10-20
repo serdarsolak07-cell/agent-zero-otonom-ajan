@@ -21,13 +21,13 @@ Agent Zero üzerine kurulu. 16 GB VRAM hedefiyle tasarlanmış. Faz faz kurulabi
 - **Source Check**: Verification of factual claims
 - **Security boundaries**, versioning, health checks
 - **8-phase** incremental setup
-- Fully local (Ollama / LM Studio), no cloud required
+- Fully local (Ollama / LM Studio) or custom OpenAI-compatible API
 
 ### Quick Start
 
 **Requirements**
 - Docker
-- Optional: Ollama (for local models)
+- Optional: Ollama (for local models) or your own OpenAI-compatible endpoint
 
 **Linux / macOS**
 ```bash
@@ -50,10 +50,17 @@ After installation open:
 
 Go to Settings → Agent Profile → select **otonom**.
 
-**Local Model**  
-After installing Ollama, set in Agent Zero:
-- Provider: Ollama
+**Local Model (Ollama)**  
+- Provider: Ollama  
 - Base URL: `http://host.docker.internal:11434`
+
+**Custom OpenAI-compatible API**  
+See full guide: [docs/custom-api.md](docs/custom-api.md)  
+Example (Cloudflare + Qwen):
+- Provider: Other OpenAI compatible
+- Base URL: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
+- Model: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
+- API Key: your `sk-unsloth-...` key
 
 ### Phases
 The system is installed in 8 phases. See the `phases/` folder.
@@ -87,13 +94,13 @@ From another terminal type `DUR` or `STOP` → the system pauses immediately. Ty
 - **Kaynak Kontrolü**: Olgusal iddiaları doğrulama
 - **Güvenlik sınırları**, sürümleme, sağlık kontrolü
 - **8 fazlı** parça parça kurulum
-- Tamamen yerel (Ollama / LM Studio), bulut gerektirmez
+- Tamamen yerel (Ollama / LM Studio) veya özel OpenAI uyumlu API
 
 ### Hızlı Kurulum
 
 **Gereksinimler**
 - Docker
-- İsteğe bağlı: Ollama (yerel model için)
+- İsteğe bağlı: Ollama (yerel model) veya kendi OpenAI uyumlu endpoint'in
 
 **Linux / macOS**
 ```bash
@@ -116,10 +123,17 @@ Kurulum bitince tarayıcıda aç:
 
 Ayarlar → Agent Profile → **otonom** seç.
 
-**Yerel Model**  
-Ollama kurduktan sonra Agent Zero ayarlarında:
-- Provider: Ollama
+**Yerel Model (Ollama)**  
+- Provider: Ollama  
 - Base URL: `http://host.docker.internal:11434`
+
+**Özel OpenAI uyumlu API**  
+Detaylı rehber: [docs/custom-api.md](docs/custom-api.md)  
+Örnek (Cloudflare + Qwen):
+- Provider: Other OpenAI compatible
+- Base URL: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
+- Model: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
+- API Key: `sk-unsloth-...` anahtarın
 
 ### Fazlar
 Sistem 8 fazda kurulur. Detaylar `phases/` klasöründe.
