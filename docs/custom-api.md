@@ -13,9 +13,9 @@ Bu rehber, OpenAI uyumlu API'nizi
 ## English
 
 ### Your API Details
-- **Base URL**: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
+- **Base URL**: `YOUR_TUNNEL_URL/v1`
 - **API Key**: `sk-unsloth-YOUR_KEY` (replace with your real key)
-- **Model**: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
+- **Model**: `your-model-name`
 
 ### Method 1 — UI (Recommended)
 
@@ -23,8 +23,8 @@ Bu rehber, OpenAI uyumlu API'nizi
 2. For **Main** model (and Utility if you want):
    - Provider: **Other OpenAI compatible**  
      (or use the Custom Providers plugin **+** button if available)
-   - Model name: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
-   - API Base URL: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
+   - Model name: `your-model-name`
+   - API Base URL: `YOUR_TUNNEL_URL/v1`
    - API Key: `sk-unsloth-YOUR_KEY`
 3. In **Advanced → Additional Parameters** add (if you get LiteLLM errors):
    ```
@@ -37,12 +37,12 @@ Bu rehber, OpenAI uyumlu API'nizi
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1",
+    base_url="YOUR_TUNNEL_URL/v1",
     api_key="sk-unsloth-YOUR_KEY",
 )
 
 response = client.chat.completions.create(
-    model="0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S",
+    model="your-model-name",
     messages=[{"role": "user", "content": "What is Unsloth?"}],
     stream=True,
 )
@@ -61,17 +61,17 @@ for chunk in response:
 ## Türkçe
 
 ### API Bilgilerin
-- **Base URL**: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
+- **Base URL**: `YOUR_TUNNEL_URL/v1`
 - **API Key**: `sk-unsloth-YOUR_KEY` (gerçek anahtarınla değiştir)
-- **Model**: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
+- **Model**: `your-model-name`
 
 ### Yöntem 1 — Arayüz (Tavsiye edilen)
 
 1. Agent Zero Web UI → **Ayarlar → Models** (veya Edit Model Presets) aç.
 2. **Main** model (ve istersen Utility) için:
    - Provider: **Other OpenAI compatible**
-   - Model name: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
-   - API Base URL: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
+   - Model name: `your-model-name`
+   - API Base URL: `YOUR_TUNNEL_URL/v1`
    - API Key: `sk-unsloth-YOUR_KEY`
 3. Hata alırsan **Advanced → Additional Parameters** kısmına ekle:
    ```

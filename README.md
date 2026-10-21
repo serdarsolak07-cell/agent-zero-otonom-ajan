@@ -58,8 +58,8 @@ Go to Settings → Agent Profile → select **otonom**.
 See full guide: [docs/custom-api.md](docs/custom-api.md)  
 Example (Cloudflare + Qwen):
 - Provider: Other OpenAI compatible
-- Base URL: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
-- Model: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
+- Base URL: `YOUR_TUNNEL_URL/v1`
+- Model: `your-model-name`
 - API Key: your `sk-unsloth-...` key
 
 ### Phases
@@ -131,8 +131,8 @@ Ayarlar → Agent Profile → **otonom** seç.
 Detaylı rehber: [docs/custom-api.md](docs/custom-api.md)  
 Örnek (Cloudflare + Qwen):
 - Provider: Other OpenAI compatible
-- Base URL: `https://characteristics-dealers-starts-manufacturing.trycloudflare.com/v1`
-- Model: `0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF:Q2_K_S`
+- Base URL: `YOUR_TUNNEL_URL/v1`
+- Model: `your-model-name`
 - API Key: `sk-unsloth-...` anahtarın
 
 ### Fazlar
